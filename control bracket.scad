@@ -1,3 +1,4 @@
+partialPrint = false;
 postWidth = 8.5;
 postDepth = 2;
 postHeight = 24.6;
@@ -19,10 +20,13 @@ difference()
         translate([1,0,0]) postPair();
         translate([26.75,0,0]) postPair();
     }
-//    translate([36,0,0])
-//    cube([1000,1000,1000]);
-//    translate([0,5.5,0])
-//    cube([1000,1000,1000]);
+    if (partialPrint)
+    {
+        translate([36,0,0])
+        cube([1000,1000,1000]);
+        translate([0,5.5,0])
+        cube([1000,1000,1000]);
+    }
 }
 
 module post() 
