@@ -5,6 +5,7 @@ postHeight = 24.6;
 nubWidth = 5;
 nubDepth = 4.5;
 nubHeight = 5;
+shelfHeight = 8.5;
 difference()
 {
     union()
@@ -16,7 +17,7 @@ difference()
             cube(size=[16,29,2]);
         }
         translate([44-11,0,0])
-        cube(size=[11,38,10.75]);
+        cube(size=[11,38,shelfHeight]);
         translate([1,0,0]) postPair();
         translate([26.75,0,0]) postPair();
     }
